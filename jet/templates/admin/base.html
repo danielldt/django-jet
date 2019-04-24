@@ -239,7 +239,7 @@
                             <div class="apps-list-pinned">
                                 {% for app in app_list %}
                                     {% if app.has_perms and app.pinned %}
-                                        <a{% if app.url %} href="{{ app.url }}"{% endif %} class="sidebar-link popup-section-link app-item" data-app-label="{{ app.app_label }}" data-popup-section-class="sidebar-popup-section-{{ app.app_label }}" data-order="{{ forloop.counter }}"{% if app.url_blank %} target="_blank"{% endif %}>
+                                        <a{% if app.url and APPLICATION_PAGE %} href="{{ app.url }}"{% endif %} class="sidebar-link popup-section-link app-item" data-app-label="{{ app.app_label }}" data-popup-section-class="sidebar-popup-section-{{ app.app_label }}" data-order="{{ forloop.counter }}"{% if app.url_blank %} target="_blank"{% endif %}>
                                             <span class="sidebar-left collapsible">
                                                 <span class="sidebar-left-pin icon-star pin-toggle"></span>
                                                 <span class="sidebar-left-unpin icon-cross pin-toggle"></span>
@@ -263,7 +263,7 @@
                             <div class="apps-list">
                                 {% for app in app_list %}
                                     {% if app.has_perms and not app.pinned %}
-                                        <a{% if app.url %} href="{{ app.url }}"{% endif %} class="sidebar-link popup-section-link app-item" data-app-label="{{ app.app_label }}" data-popup-section-class="sidebar-popup-section-{{ app.app_label }}" data-order="{{ forloop.counter }}"{% if app.url_blank %} target="_blank"{% endif %}>
+                                        <a{% if app.url and APPLICATION_PAGE %} href="{{ app.url }}"{% endif %} class="sidebar-link popup-section-link app-item" data-app-label="{{ app.app_label }}" data-popup-section-class="sidebar-popup-section-{{ app.app_label }}" data-order="{{ forloop.counter }}"{% if app.url_blank %} target="_blank"{% endif %}>
                                             <span class="sidebar-left collapsible">
                                                 <span class="sidebar-left-pin icon-star pin-toggle"></span>
                                                 <span class="sidebar-left-unpin icon-cross pin-toggle"></span>
