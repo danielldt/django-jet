@@ -147,6 +147,7 @@
     {% endif %}
 
     {% jet_get_side_menu_compact as SIDE_MENU_COMPACT %}
+    {% jet_get_application_page as APPLICATION_PAGE %}
     {% if not is_popup %}
         <div class="related-popup-container scrollable">
             <a href="#" class="related-popup-back">
@@ -202,7 +203,7 @@
                             {% if app.has_perms %}
                                 <div class="sidebar-section">
                                     <div class="sidebar-title">
-                                        <a{% if app.url %} href="{{ app.url }}"{% endif %} class="sidebar-title-link"{% if app.url_blank %} target="_blank"{% endif %}>
+                                        <a{% if app.url and APPLICATION_PAGE %} href="{{ app.url }}"{% endif %} class="sidebar-title-link"{% if app.url_blank %} target="_blank"{% endif %}>
                                             {{ app.label }}
                                         </a>
                                     </div>
@@ -344,7 +345,7 @@
                                     <input class="sidebar-popup-search" placeholder="{% trans "Search" %}...">
 
                                     <ul class="sidebar-popup-list">
-                                        {% if app.url %}
+                                        {% if app.url and APPLICATION_PAGE %}
                                             <li class="sidebar-popup-list-item app-{{ app.app_label }}{{ app.current|yesno:" current," }}">
                                                 <a href="{{ app.url }}" class="sidebar-popup-list-item-link">{% trans 'Application page' %}</a>
                                             </li>
