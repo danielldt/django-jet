@@ -52,19 +52,17 @@
             <span id="branding-menu" class="sidebar-header-menu-icon icon-menu sidebar-toggle"></span>
             <span id="branding-pin" class="sidebar-link-icon icon-pin sidebar-pin"></span>
             {% jet_get_logo as LOGO %}
+            {% block branding %}
                 {% if LOGO %}
-                    {% block branding %}
-                        <h1 id="site-name">
-                            <a href="{% url 'admin:index' %}">
-                                {# Your logo here #}
-                                <img src="{% static LOGO %}" alt="Logo" height="50%" width="50%">
-                                <br><br>
-                            </a>
-                        </h1>
-                    {% endblock %}
-                {% else %}
-            {% block branding %}{% endblock %}
-            {% endif %}
+                    <h1 id="site-name">
+                        <a href="{% url 'admin:index' %}">
+                            {# Your logo here #}
+                            <img src="{% static LOGO %}" alt="Logo" height="50%" width="50%">
+                            <br><br>
+                        </a>
+                    </h1>
+             {% endif %}
+            {% endblock %}
         </div>
         {% block usertools %}
         {% if user.is_active and user.is_staff or has_permission %}
