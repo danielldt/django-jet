@@ -148,6 +148,10 @@ def jet_get_side_menu_compact():
 def jet_get_application_page():
     return settings.JET_APPLICATION_PAGE
 
+@assignment_tag
+def jet_get_logo():
+    return settings.JET_LOGO
+
 
 @assignment_tag
 def jet_change_form_sibling_links_enabled():

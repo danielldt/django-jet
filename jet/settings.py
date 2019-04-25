@@ -13,3 +13,5 @@ JET_SIDE_MENU_CUSTOM_APPS = getattr(settings, 'JET_SIDE_MENU_CUSTOM_APPS', None)
 JET_CHANGE_FORM_SIBLING_LINKS = getattr(settings, 'JET_CHANGE_FORM_SIBLING_LINKS', True)
 
 JET_APPLICATION_PAGE = getattr(settings, 'JET_APPLICATION_PAGE', True)
+
+JET_LOGO = getattr(settings, 'JET_LOGO', None)
