@@ -52,11 +52,13 @@
             <span id="branding-menu" class="sidebar-header-menu-icon icon-menu sidebar-toggle"></span>
             <span id="branding-pin" class="sidebar-link-icon icon-pin sidebar-pin"></span>
             {% jet_get_logo as LOGO %}
+            {% jet_get_logo_height as LOGO_H %}
+            {% jet_get_logo_width as LOGO_W %}
                 {% if LOGO %}
                     <h1 id="site-name">
                         <a href="{% url 'admin:index' %}">
                             {# Your logo here #}
-                            <img src="{% static LOGO %}" alt="Logo" height="50%" width="50%">
+                            <img src="{% static LOGO %}" alt="Logo" height="{{ LOGO_H }}" width="{{ LOGO_W }}">
                             <br><br>
                         </a>
                     </h1>

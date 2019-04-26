@@ -152,6 +152,13 @@ def jet_get_application_page():
 def jet_get_logo():
     return settings.JET_LOGO
 
+@assignment_tag
+def jet_get_logo_height():
+    return settings.JET_LOGO_HEIGHT
+
+@assignment_tag
+def jet_get_logo_width():
+    return settings.JET_LOGO_WIDTH
 
 @assignment_tag
 def jet_change_form_sibling_links_enabled():

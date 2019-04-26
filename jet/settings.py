@@ -15,3 +15,5 @@ JET_CHANGE_FORM_SIBLING_LINKS = getattr(settings, 'JET_CHANGE_FORM_SIBLING_LINKS
 JET_APPLICATION_PAGE = getattr(settings, 'JET_APPLICATION_PAGE', True)
 
 JET_LOGO = getattr(settings, 'JET_LOGO', None)
+JET_LOGO_HEIGHT = getattr(settings, 'JET_LOGO_HEIGHT', '50%')
+JET_LOGO_WIDTH = getattr(settings, 'JET_LOGO_WIDTH', '50%')
