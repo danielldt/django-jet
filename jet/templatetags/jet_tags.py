@@ -161,6 +161,18 @@ def jet_get_logo_width():
     return settings.JET_LOGO_WIDTH
 
 @assignment_tag
+def jet_get_login_logo():
+    return settings.JET_LOGIN_LOGO
+
+@assignment_tag
+def jet_get_login_logo_height():
+    return settings.JET_LOGIN_LOGO_HEIGHT
+
+@assignment_tag
+def jet_get_login_logo_width():
+    return settings.JET_LOGIN_LOGO_WIDTH
+
+@assignment_tag
 def jet_change_form_sibling_links_enabled():
     return settings.JET_CHANGE_FORM_SIBLING_LINKS
 
