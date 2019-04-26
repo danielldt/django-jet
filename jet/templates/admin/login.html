@@ -48,7 +48,7 @@
 {% jet_get_login_logo_width as WIDTH %}
 {% if LOGO %}
 <div style="text:align-center;">
-<img src="{{ static LOGO }}" alt="Logo" height="{{ HEIGHT }}" width="{{ WIDTH }}">
+<img src="{% static LOGO %}" alt="Logo" height="{{ HEIGHT }}" width="{{ WIDTH }}">
 </div>
 {% endif %}
 
