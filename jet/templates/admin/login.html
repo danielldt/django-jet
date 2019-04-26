@@ -14,7 +14,10 @@
 {% block content_title %}{% endblock %}
 
 {% block breadcrumbs %}{% endblock %}
-
+{% block backgroundstyle %}
+    {% jet_get_login_backgroundstyle as BACKGROUND %}
+    {{ BACKGROUND }}
+{% endblock %}
 {% block content %}
 {% if form.errors and not form.non_field_errors %}
 <p class="errornote">
