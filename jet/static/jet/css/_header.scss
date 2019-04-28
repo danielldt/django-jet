@@ -113,7 +113,7 @@
     list-style: none;
     display: inline-block;
     width: 175px;
-    z-index: 4;
+    z-index: 99;
 
     @include for-mobile {
       position: fixed;
